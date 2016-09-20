@@ -2,25 +2,17 @@
 //     $('#links').html(data);
 // });
 $(document).ready(function() {
-    $('#deadline-create').on('click', function() {
+    $('#deadline-create').click(function() {
         $.post('deadlines.php', {
             name: $('#deadline-name').val(),
             time: $('#deadline-time').val()
         }).done(function(data) {
-            alert('RETURN\n' + data)
-            $('#modal').modal('hide')
+            $('#modal').modal('hide');
             $.get('/deadlines.php', function(data) {
                 $('.panel-deadline').html(data);
             });
         });
-    })
-    $('.deadline-remove').on('click', function() {
-        $.post('deadlines.php', {
-            id: $(this).attr('id')
-        }).done(function(data) {
-            alert('RETURN\n' + data)
-        });
-    })
+    });
     $('#sb_form_q').focus(function() {
         $('.foreground').fadeIn('fast');
     });
@@ -32,8 +24,24 @@ $(document).ready(function() {
     }, function() {
         $('#trends').fadeOut('fast');
     });
+    $('#codeforces').hover(function() {
+        $('#contests').fadeIn('fast');
+    }, function() {
+        $('#contests').fadeOut('fast');
+    });
     $.get('/deadlines.php', function(data) {
         $('.panel-deadline').html(data);
+        $('.deadline-remove').click(function() {
+            if (confirm("Are you sure to remove?")) {
+                $.post('deadlines.php', {
+                    id: $(this).attr('id')
+                }).done(function(data) {
+                    $.get('/deadlines.php', function(data) {
+                        $('.panel-deadline').html(data);
+                    });
+                });
+            }
+        });
     });
     $.get('/events.php', function(data) {
         $('.panel-event').html(data);
@@ -43,6 +51,7 @@ $(document).ready(function() {
         $('#bilibili .badge').html($('#trend-new').html());
     });
     $.get('/contest.php', function(data) {
-        $('.panel-contest').html(data);
+        $('.dropdown-codeforces').html(data);
+        $('#codeforces .badge').html($('#contest-new').html());
     });
 });

@@ -23,6 +23,10 @@
     width: 360px;
 }
 
+.dropdown-codeforces {
+    width: 360px;
+}
+
 .panel-contest {
     position: absolute;
     bottom: 4%;
