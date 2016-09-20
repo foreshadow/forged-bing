@@ -1,0 +1,92 @@
+.sw_sform {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    width: 1028px;
+    _width: 690px;
+    margin: 0;
+    z-index: 9;
+}
+
+.hp_sw_logo {
+    float: left;
+    text-indent: -20em;
+    _padding-right: 8px;
+    _height: 50px;
+}
+
+.content_wrap .sw_logo, #sbox .hp_sw_logo {
+    background: url(http://cn.bing.com/s/a/hp_zh_cn.png) no-repeat;
+    margin: -4px 18px 0 0;
+    height: 53px;
+    width: 107px;
+    _background-image: none;
+    _filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='/s/a/hp_zh_cn.png');
+}
+
+body .b_searchboxForm .b_searchboxSubmit {
+    height: 45px;
+    width: 45px;
+    border: 8px solid #0c8484;
+    background: #0c8484 url(http://cn.bing.com/s/a/hpc18.png) no-repeat;
+    background-position: -169px -63px;
+    overflow: hidden;
+    vertical-align: top;
+    margin: -1px;
+}
+
+body .b_searchboxForm {
+    background-color: #fff;
+    border: 1px #e5e5e5 solid;
+    _border: 0;
+    padding: 0;
+}
+
+.b_searchboxForm {
+    position: relative;
+    display: inline-block;
+    _left: 25px;
+    zoom: 1;
+}
+
+.b_searchboxForm {
+    font: 18px/normal 'Segoe UI', Arial, Helvetica, Sans-Serif;
+}
+
+.b_searchboxSubmit {
+    text-indent: -99em;
+    position: static;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+body .b_searchbox {
+    background-color: #fff;
+    margin: 6px 1px 0 9px;
+    width: 487px;
+    border-right: 0;
+    padding-right: 4px;
+    _height: 20px;
+}
+
+.b_searchbox {
+    width: 490px;
+    margin-top: 2px;
+    margin-right: 0;
+    margin-bottom: 3px;
+    margin-left: 12px;
+    border: 0;
+    padding-top: 0;
+    padding-right: 10px;
+    padding-bottom: 0;
+    padding-left: 0;
+    max-height: 30px;
+    outline: none;
+    -webkit-appearance: none;
+    border-right: 1px solid;
+    border-color: #ccc;
+    box-sizing: content-box;
+    position: relative;
+    height: 40px;
+}
