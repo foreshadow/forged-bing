@@ -25,31 +25,22 @@ if (isset($_POST['name']) && isset($_POST['time'])) {
     die();
 }
 ?>
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-default" style="background-color: rgba(255, 255, 255, 0.9)">
-        <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading">
-          <table class="panel-body table table-condensed">
-            <tbody>
-              <?php $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/data.db'); ?>
-              <?php $results = $db->query('SELECT * FROM deadlines ORDER BY uts'); ?>
-              <?php while ($row = $results->fetchArray()) : ?>
-              <tr>
-                <td class="text-left" style="padding-left: 15px;"><?php echo $row['name']; ?></td>
-                <td class="text-right"><?php echo date('n/d', $row['uts']); ?></td>
-                <td class="text-right" style="padding-right: 15px;">
-                  <button id="<?php echo $row['id']; ?>" class="close deadline-remove" style="float: none;">&times;</button>
-                </td>
-              </tr>
-              <?php endwhile; ?>
-            </tbody>
-          </table>
-        </div>
-        <!--                  disabled, remove this to enable                 vvvvvvvvv -->
-        <div class="panel-footer" role="tab" id="footer" data-toggle="collapse-disabled" href="#collapse" aria-expanded="true" aria-controls="collapse">
-          Todo list<button class="close" data-toggle="modal" data-target="#modal">&plus;</button>
-        </div>
-      </div>
-    </div>
+<li style="margin: 6px 15px; text-decoration: underline; cursor: pointer;"
+data-toggle="modal" data-target="#modal">
+  <span class="text-primary">New deadline</span>
+  <button class="close">&plus;</button>
+  <span class="pull-right">Today <?php echo date('n/d'); ?>&nbsp;&nbsp;&nbsp;</span>
+</li>
+<?php $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/data.db'); ?>
+<?php $results = $db->query('SELECT * FROM deadlines ORDER BY uts'); ?>
+<?php $new = 0; while ($row = $results->fetchArray()) : ?>
+    <li class="divider"></li>
+<li style="margin: 6px 15px;">
+  <?php echo $row['name']; ?>
+  <div class="pull-right">
+    <?php echo date('n/d', $row['uts']); ?>&nbsp;&nbsp;
+    <button id="<?php echo $row['id']; ?>" class="close deadline-remove" style="float: none;">&times;</button>
   </div>
+</li>
+<?php $new += 1; endwhile; ?>
+<li id="deadlines-new" class="hidden"><?php echo $new; ?></li>

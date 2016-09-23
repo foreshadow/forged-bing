@@ -2,15 +2,43 @@
 //     $('#links').html(data);
 // });
 $(document).ready(function() {
+    function update_deadline() {
+        $.get('/deadlines.php', function(data) {
+            $('#deadlines-list').html(data);
+            $('#deadlines .badge').html($('#deadlines-new').html());
+        });
+    }
+    $.get('/deadlines.php', function(data) {
+        $('#deadlines-list').html(data);
+        $('#deadlines .badge').html($('#deadlines-new').html());
+        $('.deadline-remove').click(function() {
+            if (confirm("Are you sure to remove?")) {
+                $.post('deadlines.php', {
+                    id: $(this).attr('id')
+                }).done(function(data) {
+                    update_deadline();
+                });
+            }
+        });
+    });
+    $.get('/events.php', function(data) {
+        $('.panel-event').html(data);
+    });
+    $.get('/trends.php', function(data) {
+        $('#trends').html(data);
+        $('#bilibili .badge').html($('#trend-new').html());
+    });
+    $.get('/contest.php', function(data) {
+        $('#contests').html(data);
+        $('#codeforces .badge').html($('#contest-new').html());
+    });
     $('#deadline-create').click(function() {
         $.post('deadlines.php', {
             name: $('#deadline-name').val(),
             time: $('#deadline-time').val()
         }).done(function(data) {
             $('#modal').modal('hide');
-            $.get('/deadlines.php', function(data) {
-                $('.panel-deadline').html(data);
-            });
+            update_deadline();
         });
     });
     $('#sb_form_q').focus(function() {
@@ -29,29 +57,10 @@ $(document).ready(function() {
     }, function() {
         $('#contests').fadeOut('fast');
     });
-    $.get('/deadlines.php', function(data) {
-        $('.panel-deadline').html(data);
-        $('.deadline-remove').click(function() {
-            if (confirm("Are you sure to remove?")) {
-                $.post('deadlines.php', {
-                    id: $(this).attr('id')
-                }).done(function(data) {
-                    $.get('/deadlines.php', function(data) {
-                        $('.panel-deadline').html(data);
-                    });
-                });
-            }
-        });
+    $('#deadlines-link').click(function() {
+        $('#deadlines-list').toggle("fast");
     });
-    $.get('/events.php', function(data) {
-        $('.panel-event').html(data);
-    });
-    $.get('/trends.php', function(data) {
-        $('.dropdown-trend').html(data);
-        $('#bilibili .badge').html($('#trend-new').html());
-    });
-    $.get('/contest.php', function(data) {
-        $('.dropdown-codeforces').html(data);
-        $('#codeforces .badge').html($('#contest-new').html());
+    $('#switch').click(function() {
+        $('#navbar-bottom').toggle("fast");
     });
 });
