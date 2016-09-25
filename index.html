@@ -19,14 +19,14 @@
 </head>
 
 <body>
-  <div class="background"></div>
-  <div class="foreground"></div>
+  <div class="full-screen background"></div>
+  <div class="full-screen foreground"></div>
   <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> -->
-          <h4 class="modal-title" id="modalLabel">New event</h4>
+          <h4 class="modal-title" id="modalLabel">New deadline</h4>
         </div>
         <div class="modal-body">
           <form class="form-horizontal" role="form">
@@ -70,14 +70,17 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Links <span class="caret"></span></a>
             <ul id="links" class="dropdown-menu" role="menu"></ul>
           </li>
+          <li><a href="//taobao.com">Taobao</a></li>
           <li id="bilibili" class="dropdown">
             <a href="//bilibili.com">Bilibili <span class="badge"></span></a>
             <ul id="trends" class="dropdown-trend dropdown-menu" style="padding: 9px 0px;"></ul>
           </li>
-          <li><a href="//taobao.com">Taobao</a></li>
-          <li><a href="//github.com">Github</a></li>
+          <li id="github" class="dropdown">
+            <a href="//github.com">Github <span class="badge"></span></a>
+            <ul id="feeds" class="dropdown-github dropdown-menu"></ul>
+          </li>
           <li id="codeforces" class="dropdown">
-            <a href="//codeforces.com">CodeForces <span class="badge"></a>
+            <a href="//codeforces.com">CodeForces <span class="badge"></span></a>
             <ul id="contests" class="dropdown-codeforces dropdown-menu"></ul>
           </li>
           <li><a href="//vjudge.net">VJudge</a></li>
@@ -100,10 +103,8 @@
       </form>
     </div>
   </div>
-  <div class="panel-contest"></div>
-  <div class="panel-trend"></div>
   <nav id="navbar-bottom" class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-    <div class="container-fluid" style="margin: 0 4%;">
+    <div class="container-fluid" style="margin: 0 4% 0 8%;">
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li id="deadlines" class="dropdown">
@@ -112,11 +113,12 @@
           </li>
         </ul>
         <ul class="nav navbar-nav pull-right">
+          <li><a href="//fanyi.baidu.com">Translation</a></li>
           <li><a href="//mail.infinitys.site">Infinity's Mail Lite</a></li>
           <li><a href="//pastebin.infinitys.site">Pastebin</a></li>
-          <li><a href="//fanyi.baidu.com">Translation</a></li>
           <li><a href="//v3.bootcss.com">Bootstrap</a></li>
           <li><a href="//php.net/manual/zh/">PHP Manual</a></li>
+          <li><a href="//api.jquery.com/">jQuery API</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div>

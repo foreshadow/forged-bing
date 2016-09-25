@@ -1,6 +1,3 @@
-// $.get('/dropdown.php', function(data) {
-//     $('#links').html(data);
-// });
 $(document).ready(function() {
     function update_deadline() {
         $.get('/deadlines.php', function(data) {
@@ -8,11 +5,19 @@ $(document).ready(function() {
             $('#deadlines .badge').html($('#deadlines-new').html());
         });
     }
+
+    function update_github() {
+        $.get('/github.php', function(data) {
+            $('#feeds').html(data);
+            $('#github .badge').html($('#github-new').html());
+        });
+    }
+
     $.get('/deadlines.php', function(data) {
         $('#deadlines-list').html(data);
         $('#deadlines .badge').html($('#deadlines-new').html());
         $('.deadline-remove').click(function() {
-            if (confirm("Are you sure to remove?")) {
+            if (confirm('Are you sure to remove?')) {
                 $.post('deadlines.php', {
                     id: $(this).attr('id')
                 }).done(function(data) {
@@ -27,6 +32,12 @@ $(document).ready(function() {
     $.get('/trends.php', function(data) {
         $('#trends').html(data);
         $('#bilibili .badge').html($('#trend-new').html());
+    });
+    $.get('/github.php', function(data) {
+        $('#feeds').html(data);
+        $('#github .badge').html($('#github-new').html());
+    }).fail(function() {
+        update_github();
     });
     $.get('/contest.php', function(data) {
         $('#contests').html(data);
@@ -52,15 +63,20 @@ $(document).ready(function() {
     }, function() {
         $('#trends').fadeOut('fast');
     });
+    $('#github').hover(function() {
+        $('#feeds').fadeIn('fast');
+    }, function() {
+        $('#feeds').fadeOut('fast');
+    });
     $('#codeforces').hover(function() {
         $('#contests').fadeIn('fast');
     }, function() {
         $('#contests').fadeOut('fast');
     });
     $('#deadlines-link').click(function() {
-        $('#deadlines-list').toggle("fast");
+        $('#deadlines-list').toggle('fast');
     });
     $('#switch').click(function() {
-        $('#navbar-bottom').toggle("fast");
+        $('#navbar-bottom').toggle('fast');
     });
 });
