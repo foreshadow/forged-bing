@@ -22,6 +22,9 @@ $(document).ready(function() {
         });
     }
 
+    $('a[href^="http"]').each(function() {
+        $(this).attr('target', '_blank');
+    });
     $.get('/deadlines.php', function(data) {
         $('#deadlines-list').html(data);
         $('#deadlines .badge').html($('#deadlines-new').html());
@@ -45,12 +48,19 @@ $(document).ready(function() {
     $.get('/github.php', function(data) {
         $('#feeds').html(data);
         $('#github .badge').html($('#github-new').html());
+        $('#github a').each(function() {
+            $(this).attr('href', 'https://github.com' + $(this).attr('href'));
+            $(this).attr('target', '_blank');
+        });
     }).fail(function() {
         update_github();
     });
     $.get('/contest.php?handle=Infinity25', function(data) {
         $('#contests').html(data);
         $('#codeforces .badge').html($('#contest-new').html());
+        $('a[href^="http"]').each(function() {
+            $(this).attr('target', '_blank');
+        });
         $('#codeforces .verdict').tooltip({
             placement: 'right'
         });

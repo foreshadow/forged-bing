@@ -88,7 +88,7 @@ $first = true; $new = 0;
       <?php echo date('n/j', $contest->startTimeSeconds); ?>
       <?php echo date('G:i', $contest->startTimeSeconds); ?>
     </span>
-    <a href="//codeforces.com/contests/<?php echo $contest->id; ?>" style="padding: 0;">
+    <a href="http://codeforces.com/contests/<?php echo $contest->id; ?>" style="padding: 0;">
       <h5 style="margin: 0;"><?php echo substr($contest->name, 0, 32); ?></h5>
     </a>
   </div>
@@ -103,7 +103,7 @@ $first = true; $new = 0;
 <li class="divider"></div>
 <li class="dropdown-content">
   <p style="margin: 0; font-weight: bold;">
-    <a href="//codeforces.com/contest/<?php echo $s->problem->contestId; ?>/problem/<?php echo $s->problem->index; ?>">
+    <a href="http://codeforces.com/contest/<?php echo $s->problem->contestId; ?>/problem/<?php echo $s->problem->index; ?>">
       <?php echo $s->problem->contestId . $s->problem->index . ' - ' . $s->problem->name; ?>
     </a>
   </p>
@@ -118,7 +118,7 @@ $first = true; $new = 0;
           title="<?php echo $s->timeConsumedMillis; ?> ms, <?php echo $s->memoryConsumedBytes / 1024; ?> KB">
       <?php echo codeforces_verdict($s->verdict, $s->passedTestCount); ?>
     </span>
-    <a href="//codeforces.com/contest/<?php echo $s->problem->contestId; ?>/submission/<?php echo $s->id; ?>"> #</a>
+    <a href="http://codeforces.com/contest/<?php echo $s->problem->contestId; ?>/submission/<?php echo $s->id; ?>"> #</a>
   </p>
   <p class="hidden" style="margin: 0;">
     <?php echo $s->timeConsumedMillis; ?> ms&nbsp;
