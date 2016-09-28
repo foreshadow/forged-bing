@@ -48,7 +48,7 @@ $(document).ready(function() {
     $.get('/github.php', function(data) {
         $('#feeds').html(data);
         $('#github .badge').html($('#github-new').html());
-        $('#github a').each(function() {
+        $('#feeds a').each(function() {
             $(this).attr('href', 'https://github.com' + $(this).attr('href'));
             $(this).attr('target', '_blank');
         });
@@ -61,7 +61,7 @@ $(document).ready(function() {
         $('a[href^="http"]').each(function() {
             $(this).attr('target', '_blank');
         });
-        $('#codeforces .verdict').tooltip({
+        $('#contests .verdict').tooltip({
             placement: 'right'
         });
     });
