@@ -3,6 +3,15 @@ $(document).ready(function() {
         $.get('/deadlines.php', function(data) {
             $('#deadlines-list').html(data);
             $('#deadlines .badge').html($('#deadlines-new').html());
+            $('.deadline-remove').click(function() {
+                if (confirm('Are you sure to remove?')) {
+                    $.post('deadlines.php', {
+                        id: $(this).attr('id')
+                    }).done(function(data) {
+                        update_deadline();
+                    });
+                }
+            });
         });
     }
 
@@ -39,9 +48,12 @@ $(document).ready(function() {
     }).fail(function() {
         update_github();
     });
-    $.get('/contest.php', function(data) {
+    $.get('/contest.php?handle=Infinity25', function(data) {
         $('#contests').html(data);
         $('#codeforces .badge').html($('#contest-new').html());
+        $('#codeforces .verdict').tooltip({
+            placement: 'right'
+        });
     });
     $('#deadline-create').click(function() {
         $.post('deadlines.php', {

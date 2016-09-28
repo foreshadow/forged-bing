@@ -17,6 +17,16 @@
     opacity: 0.55;
 }
 
+.inline {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-content {
+    margin: 6px 15px;
+}
+
 .dropdown-trend {
     width: 360px;
     font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
@@ -136,7 +146,7 @@
     width: 16px;
     height: 16px;
     top: 2px;
-    left: 6px;
+    left: 9px;
 }
 
 .github-feed .simple .time {

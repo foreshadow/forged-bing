@@ -25,9 +25,8 @@ if (isset($_POST['name']) && isset($_POST['time'])) {
     die();
 }
 ?>
-<li style="margin: 6px 15px; text-decoration: underline; cursor: pointer;"
-data-toggle="modal" data-target="#modal">
-  <span class="text-primary">New deadline</span>
+<li class="dropdown-content" style="cursor: pointer;" data-toggle="modal" data-target="#modal">
+  <span style="font-weight: bold;">Deadlines</span>
   <button class="close">&plus;</button>
   <span class="pull-right">Today <?php echo date('n/d'); ?>&nbsp;&nbsp;&nbsp;</span>
 </li>
@@ -35,12 +34,12 @@ data-toggle="modal" data-target="#modal">
 <?php $results = $db->query('SELECT * FROM deadlines ORDER BY uts'); ?>
 <?php $new = 0; while ($row = $results->fetchArray()) : ?>
     <li class="divider"></li>
-<li style="margin: 6px 15px;">
+<li class="dropdown-content">
   <?php echo $row['name']; ?>
   <div class="pull-right">
     <?php echo date('n/d', $row['uts']); ?>&nbsp;&nbsp;
     <button id="<?php echo $row['id']; ?>" class="close deadline-remove" style="float: none;">&times;</button>
   </div>
 </li>
-<?php $new += 1; endwhile; ?>
+<?php $new++; endwhile; ?>
 <li id="deadlines-new" class="hidden"><?php echo $new; ?></li>

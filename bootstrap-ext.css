@@ -23,6 +23,10 @@
     overflow: visible;
 }
 
+.dropdown-menu .divider-black {
+    background-color: #000;
+}
+
 .dropdown-menu .divider-blank {
     margin-top: 4px;
     margin-bottom: 4px;
