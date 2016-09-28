@@ -1,9 +1,13 @@
 <?php date_default_timezone_set('Asia/Shanghai'); ?>
 <?php $url = 'http://codeforces.com/api/contest.list'; ?>
 <?php $json = json_decode(file_get_contents($url)); ?>
-<?php $first = true; $new = 0; foreach ($json->result as $contest): ?>
+<?php $list = []; ?>
+<?php foreach ($json->result as $contest): ?>
 <?php if ($contest->phase == 'FINISHED') break; ?>
-<?php if (!$first) : ?>
+<?php array_push($list, $contest); ?>
+<?php endforeach; ?>
+<?php $first = true; $new = 0; ?>
+<?php foreach (array_reverse($list) as $contest): if (!$first) : ?>
 <li class="divider" style=""></div>
 <?php endif; ?>
 <li style="margin: 6px 15px;">
@@ -13,7 +17,7 @@
       <?php echo date('G:i', $contest->startTimeSeconds); ?>
     </span>
     <a href="//codeforces.com/contests/<?php echo $contest->id; ?>" style="padding: 0;">
-      <h5 style="margin: 0;"><?php echo substr($contest->name, 0, 30); ?></h5>
+      <h5 style="margin: 0;"><?php echo substr($contest->name, 0, 32); ?></h5>
     </a>
   </div>
 </li>
