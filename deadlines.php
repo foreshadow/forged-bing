@@ -27,8 +27,8 @@ if (isset($_POST['name']) && isset($_POST['time'])) {
 ?>
 <li class="dropdown-content" style="cursor: pointer;" data-toggle="modal" data-target="#modal">
   <span style="font-weight: bold;">Deadlines</span>
-  <button class="close">&plus;</button>
-  <span class="pull-right">Today <?php echo date('n/d'); ?>&nbsp;&nbsp;&nbsp;</span>
+  <button class="close" style="line-height: .65;">&plus;</button>
+  <span class="pull-right">Today <?php echo date('n/d'); ?>&nbsp;&nbsp;</span>
 </li>
 <?php $db = new SQLite3($_SERVER['DOCUMENT_ROOT'].'/data.db'); ?>
 <?php $results = $db->query('SELECT * FROM deadlines ORDER BY uts'); ?>
@@ -36,9 +36,9 @@ if (isset($_POST['name']) && isset($_POST['time'])) {
     <li class="divider"></li>
 <li class="dropdown-content">
   <?php echo $row['name']; ?>
+  <button id="<?php echo $row['id']; ?>" class="close deadline-remove" style="line-height: .65;">&times;</button>
   <div class="pull-right">
     <?php echo date('n/d', $row['uts']); ?>&nbsp;&nbsp;
-    <button id="<?php echo $row['id']; ?>" class="close deadline-remove" style="float: none;">&times;</button>
   </div>
 </li>
 <?php $new++; endwhile; ?>

@@ -13,12 +13,13 @@
   <!-- Bootstrap core CSS -->
   <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"> -->
-  <link href="/bootstrap-ext.css" rel="stylesheet">
-  <link href="/bing.css" rel="stylesheet">
-  <link href="/infinity.css" rel="stylesheet">
+  <link href="/bootstrap-ext.min.css" rel="stylesheet">
+  <link href="/bing.min.css" rel="stylesheet">
+  <link href="/infinity.min.css" rel="stylesheet">
 </head>
 
 <body>
+  <div class="full-screen alternative">You are offline</div>
   <div class="full-screen background"></div>
   <div class="full-screen foreground"></div>
   <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -86,6 +87,7 @@
           <li><a href="http://vjudge.net">VJudge</a></li>
         </ul>
         <ul class="nav navbar-nav pull-right">
+          <li id="realtime" class="navbar-text"></li>
           <li><a id="switch" href="#">Bottom navbar</a></li>
         </ul>
       </div>
@@ -129,7 +131,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="/infinity.js"></script>
+  <script src="/infinity.min.js"></script>
 
 </body>
 

@@ -2,3 +2,5 @@ old
 data.db
 trends.php
 github.php
+*.min.css
+*.min.js

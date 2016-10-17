@@ -23,16 +23,36 @@ function codeforces_rank_color_class($rating) {
 }
 
 function codeforces_verdict_class($verdict) {
-    if ($verdict == 'OK') {
-        return "verdict-accepted";
+    if (!isset($verdict)) {
+        return 'verdict-waiting';
+    } elseif ($verdict == 'SKIPPED') {
+        return '';
+    } elseif ($verdict == 'CHALLENGED') {
+        return 'verdict-failed';
+    } elseif ($verdict == 'OK') {
+        return 'verdict-accepted';
     } else {
-        return "verdict-rejected";
+        return 'verdict-rejected';
     }
 }
 
-function codeforces_verdict($verdict, $testcase) {
-    if ($verdict == 'OK') {
-        return "Accepted";
+function codeforces_verdict($verdict, $testcase, $testset) {
+    if (!isset($verdict)) {
+        if ($testset == 'TESTS' && isset($testcase)) {
+            return 'Testing on test ' . (string) ($testcase + 1);
+        } else {
+            return 'In queue';
+        }
+    } elseif ($verdict == 'CHALLENGED') {
+        return 'Hacked';
+    } elseif ($verdict == 'SKIPPED') {
+        return 'Skipped';
+    } else if ($verdict == 'OK') {
+        if ($testset == 'PRETESTS') {
+            return 'Pretest passed';
+        } else {
+            return 'Accepted';
+        }
     } else {
         return ucwords(strtolower(str_replace('_', ' ', $verdict))) . ' on test ' . (string) ($testcase + 1);
     }
@@ -45,6 +65,9 @@ $handle = $_GET['handle'];
 $info = json_decode(file_get_contents("http://codeforces.com/api/user.info?handles=$handle"))->result[0];
 $json = json_decode(file_get_contents('http://codeforces.com/api/contest.list'));
 $status = json_decode(file_get_contents("http://codeforces.com/api/user.status?handle=$handle&from=1&count=10"))->result;
+$rating = json_decode(file_get_contents('http://codeforces.com/api/user.rating?handle=Infinity25'))->result;
+$last = $rating[count($rating) - 1];
+$increment = $last->newRating - $last->oldRating;
 $list = [];
 foreach ($json->result as $contest) {
     if ($contest->phase == 'FINISHED') {
@@ -59,11 +82,11 @@ $first = true; $new = 0;
   <img src="<?php echo $info->titlePhoto; ?>"
        style="max-width: 90px; max-height: 80px; border-radius: 3px; float: left;">
   <div style="float: left; margin-left: 15px;">
-    <p style="margin: 0;">
-      <span class="<?php echo codeforces_rank_color_class($info->rating); ?>" style="font-weight: bold;">
-        <?php echo ucwords($info->rank); ?> - <?php echo $info->rating; ?>
-      </span>
-    </p>
+    <div class="<?php echo codeforces_rank_color_class($info->rating); ?>" style="margin: 0; font-weight: bold;">
+      <div style="float: right;"><?php echo $info->rating; ?></div>
+      <div><?php echo ucwords($info->rank); ?></div>
+      <div style="float: right; font-size: 12px; color: #bbb;"><?php if ($increment > 0) { echo '+'; } echo $increment; ?></div>
+    </div>
     <h3 class="rated-user <?php echo codeforces_rank_color_class($info->rating); ?>" style="margin: 0;">
       <?php echo $info->handle; ?>
     </h3>
@@ -89,7 +112,7 @@ $first = true; $new = 0;
       <?php echo date('G:i', $contest->startTimeSeconds); ?>
     </span>
     <a href="http://codeforces.com/contests/<?php echo $contest->id; ?>" style="padding: 0;">
-      <h5 style="margin: 0;"><?php echo substr($contest->name, 0, 32); ?></h5>
+      <h5 class="inline" style="margin: 0;"><?php echo $contest->name; ?></h5>
     </a>
   </div>
 </li>
@@ -116,7 +139,7 @@ $first = true; $new = 0;
     <span class="<?php echo codeforces_verdict_class($s->verdict); ?> verdict"
           style="cursor: default;"
           title="<?php echo $s->timeConsumedMillis; ?> ms, <?php echo $s->memoryConsumedBytes / 1024; ?> KB">
-      <?php echo codeforces_verdict($s->verdict, $s->passedTestCount); ?>
+      <?php echo codeforces_verdict($s->verdict, $s->passedTestCount, $s->testset); ?>
     </span>
     <a href="http://codeforces.com/contest/<?php echo $s->problem->contestId; ?>/submission/<?php echo $s->id; ?>"> #</a>
   </p>

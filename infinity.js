@@ -22,6 +22,25 @@ $(document).ready(function() {
         });
     }
 
+    function realtime() {
+        var date = new Date();
+        var time = date.getHours() + ':';
+        if (date.getMinutes() < 10) {
+            time += '0';
+        }
+        time += date.getMinutes();
+        // time += ':';
+        // if (date.getSeconds()) {
+        //     time += '0';
+        // }
+        // time += date.getSeconds();
+        $('#realtime').html(
+            (date.getYear() + 1900) + '/' + (date.getMonth() + 1) + '/' + date.getDay() + '&nbsp;&nbsp;' + time
+        );
+        setTimeout(realtime, 1000);
+    }
+
+    realtime();
     $('a[href^="http"]').each(function() {
         $(this).attr('target', '_blank');
     });
@@ -52,8 +71,6 @@ $(document).ready(function() {
             $(this).attr('href', 'https://github.com' + $(this).attr('href'));
             $(this).attr('target', '_blank');
         });
-    }).fail(function() {
-        update_github();
     });
     $.get('/contest.php?handle=Infinity25', function(data) {
         $('#contests').html(data);
@@ -62,6 +79,7 @@ $(document).ready(function() {
             $(this).attr('target', '_blank');
         });
         $('#contests .verdict').tooltip({
+            html: true,
             placement: 'right'
         });
     });

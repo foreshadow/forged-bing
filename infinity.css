@@ -6,6 +6,15 @@
     height: 100%;
 }
 
+.alternative {
+    padding: 20% 0 0 8%;
+    background-color: black;
+    opacity: .55;
+    font-family: microsoft yahei;
+    font-size: 60px;
+    color: white;
+}
+
 .background {
     background: url(http://area.sinaapp.com/bingImg/);
     background-size: cover;
@@ -14,7 +23,7 @@
 .foreground {
     display: none;
     background-color: black;
-    opacity: 0.55;
+    opacity: .55;
 }
 
 .inline {
@@ -40,12 +49,14 @@
 }
 
 .dropdown-codeforces {
-    font-family: verdana, arial, sans-serif;
     width: 360px;
+    font-family: verdana, arial, sans-serif;
 }
 
 .dropdown-deadline {
     width: 360px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
 }
 
 .trend-thumbnail {
@@ -57,14 +68,14 @@
 }
 
 .trend-thumbnail .duration {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, .75);
     color: white;
     font-size: 12px;
     position: absolute;
     right: 0;
     bottom: 0;
     margin: 0;
-    border-radius: 6px 0 6px 0;
+    border-radius: 3px 0 3px 0;
     padding: 1px 4px;
 }
 
@@ -146,7 +157,7 @@
     width: 16px;
     height: 16px;
     top: 2px;
-    left: 9px;
+    left: 8px;
 }
 
 .github-feed .simple .time {
@@ -175,7 +186,7 @@
 .github-feed .details blockquote {
     width: 360px;
     border: none;
-    margin: 0 0 0 0.6em;
+    margin: 0 0 0 .6em;
     padding: initial;
     color: #666;
     font-size: 13px;

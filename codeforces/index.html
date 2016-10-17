@@ -1,0 +1,37 @@
+<?php
+$html = file_get_contents("http://codeforces.com/contest/{$_REQUEST['contest']}/problems");
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://st.codeforces.com/s/88231/css/problem-statement.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div id="problem">
+          <?php echo $html; ?>
+        </div>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+
+  <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      $(".lang").hide();
+      $("div.problemindexholder[problemindex!='A']").parent().hide();
+  });
+  </script>
+</body>
+
+</html>
