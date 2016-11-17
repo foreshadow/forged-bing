@@ -1,8 +1,8 @@
 # Fake-bing
 
-A home page with navigation bar based on bing.com
+A home page with a multi-functional navigation bar, based on `bing.com`.
 
-**It is only for personal use**, where some files are reserved.
+**It is only for personal use, while some files are reserved.**
 
 Some of the APIs may be not granted, please do not use this project 
 for commercial purposes.
