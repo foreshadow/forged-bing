@@ -1,0 +1,212 @@
+.full-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.alternative {
+    padding: 20% 0 0 8%;
+    background-color: black;
+    opacity: .55;
+    font-family: microsoft yahei;
+    font-size: 60px;
+    color: white;
+}
+
+.background {
+    background: url(http://area.sinaapp.com/bingImg/);
+    background-size: cover;
+}
+
+.foreground {
+    display: none;
+    background-color: black;
+    opacity: .55;
+}
+
+.inline {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-content {
+    margin: 6px 15px;
+}
+
+.dropdown-trend {
+    width: 360px;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.dropdown-github {
+    width: 480px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1.4rem;
+}
+
+.dropdown-codeforces {
+    width: 360px;
+    font-family: verdana, arial, sans-serif;
+}
+
+.dropdown-deadline {
+    width: 360px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+}
+
+.trend-thumbnail {
+    position: relative;
+    height: 50px;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.trend-thumbnail .duration {
+    background: rgba(0, 0, 0, .75);
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    border-radius: 3px 0 3px 0;
+    padding: 1px 4px;
+}
+
+.trend-title {
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trend-detail {
+    margin-right: 15px;
+}
+
+.trend-detail p {
+    margin: 0;
+}
+
+.github-feed {
+    margin: 5px 15px;
+}
+
+.github-vcard {
+    height: 48px;
+}
+
+.github-vcard .avatar {
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-left: 0;
+    border-radius: 3px;
+}
+
+.github-vcard .names {
+    margin-left: 56px;
+}
+
+.github-vcard .fullname {
+    display: block;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+}
+
+.github-vcard .username {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #666;
+}
+
+.github-feed .octicon {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+    fill: currentColor;
+    color: #bbb;
+}
+
+.github-feed .time {
+    margin-left: 56px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.github-feed .title {
+    margin: 0 15px 0 56px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.github-feed .simple svg {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 8px;
+}
+
+.github-feed .simple .time {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.github-feed .simple .title {
+    display: inline-block;
+    float: left;
+    width: 300px;
+    margin: 0 0 0 24px;
+}
+
+.github-feed .details {
+    /* TODO: display*/
+    display: -webkit-box;
+    margin-left: 56px;
+}
+
+.github-feed .details .gravatar {
+    float: left;
+    border-radius: 3px;
+}
+
+.github-feed .details blockquote {
+    width: 360px;
+    border: none;
+    margin: 0 0 0 .6em;
+    padding: initial;
+    color: #666;
+    font-size: 13px;
+}
+
+#calendar {
+    position: absolute;
+    top: 100px;
+    right: 6%;
+    width: 200px;
+    height: 600px;
+    border-radius: 3px;
+    padding: 6px;
+    background: white;
+}
+
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    float: left;
+}
+
+.fc-title {
+    padding: 3px 6px;
+}

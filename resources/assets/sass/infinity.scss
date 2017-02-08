@@ -1,0 +1,101 @@
+.container-infinity {
+    margin-left: 8%;
+    margin-right: 4%;
+
+    .navbar-brand {
+        margin-left: -15px;
+        color: white;
+    }
+
+    .navbar-right {
+        margin-right: 0;
+    }
+}
+
+ul.ul-fluid {
+    padding: 0;
+}
+
+.routine {
+    &.routine-index {
+        width: 240px;
+        height: 660px;
+        overflow-y: scroll;
+        padding: 15px 0;
+
+        > * {
+            padding: 0 15px;
+        }
+
+        .event {
+            .time {
+                width: 50px;
+            }
+
+            .content {
+                .title {
+                    @extend h5;
+                    margin-top: 0;
+                }
+
+                .description {
+                    @extend h6;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .date {
+        > .date {
+            display: table-cell;
+            width: 50px;
+            font-size: large;
+            font-weight: bold;
+            margin-top: -4px;
+            padding-right: 15px;
+        }
+
+        .weekno {
+            display: table-cell;
+        }
+    }
+
+    .event {
+        .time {
+            display: table-cell;
+            width: 100px;
+        }
+
+        .content {
+            display: table-cell;
+
+            .title {
+                @extend h4;
+                margin-top: 0;
+            }
+
+            .description {
+                @extend h5;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    hr {
+        margin: 6px 0;
+    }
+}
+
+.calendar {
+    width: 960px;
+    margin: 15px;
+
+    .fc-content {
+        padding: 3px 6px;
+    }
+
+    .fc-time {
+        margin-right: 3px;
+    }
+}

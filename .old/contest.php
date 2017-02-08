@@ -79,9 +79,10 @@ $first = true; $new = 0;
 ?>
 <link href="http://st.codeforces.com/s/81780/css/community.css" rel="stylesheet"></link>
 <li class="dropdown-content" style="height: 80px;">
-  <img src="<?php echo $info->titlePhoto; ?>"
-       style="max-width: 90px; max-height: 80px; border-radius: 3px; float: left;">
-  <div style="float: left; margin-left: 15px;">
+  <div style="width: 80px; height: 80px; float: left; overflow: hidden;
+    background: url(http://userpic.codeforces.com/302499/title/249e4eb17611824f.jpg);
+    background-position: center; background-size: cover; border-radius: 3px; "></div>
+  <div style="float: left; margin-left: 15px; width: 233px;">
     <div class="<?php echo codeforces_rank_color_class($info->rating); ?>" style="margin: 0; font-weight: bold;">
       <div style="float: right;"><?php echo $info->rating; ?></div>
       <div><?php echo ucwords($info->rank); ?></div>
@@ -109,7 +110,7 @@ $first = true; $new = 0;
   <div>
     <span class="pull-right" style="margin: 0; line-height: 15px;">
       <?php echo date('n/j', $contest->startTimeSeconds); ?>
-      <?php echo date('G:i', $contest->startTimeSeconds); ?>
+      <?php echo date('H:i', $contest->startTimeSeconds); ?>
     </span>
     <a href="http://codeforces.com/contests/<?php echo $contest->id; ?>" style="padding: 0;">
       <h5 class="inline" style="margin: 0;"><?php echo $contest->name; ?></h5>
@@ -133,7 +134,7 @@ $first = true; $new = 0;
   <!-- <p class="divider"></p> -->
   <?php do { ?>
   <p class="pull-right" style="margin: 0; font-size: small; color: #bbb;">
-      <?php echo date('n/j G:i', $s->creationTimeSeconds); ?>
+      <?php echo date('n/j H:i', $s->creationTimeSeconds); ?>
   </p>
   <p style="margin: 0;">
     <span class="<?php echo codeforces_verdict_class($s->verdict); ?> verdict"

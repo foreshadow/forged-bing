@@ -191,3 +191,22 @@
     color: #666;
     font-size: 13px;
 }
+
+.calendar-index {
+    position: absolute;
+    top: 100px;
+    right: 6%;
+    width: 200px;
+    height: 600px;
+    border-radius: 3px;
+    padding: 6px;
+    background: white;
+}
+
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    float: left;
+}
+
+.fc-title {
+    padding: 3px 6px;
+}

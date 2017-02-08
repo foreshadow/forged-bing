@@ -35,7 +35,7 @@ $(document).ready(function() {
         // }
         // time += date.getSeconds();
         $('#realtime').html(
-            (date.getYear() + 1900) + '/' + (date.getMonth() + 1) + '/' + date.getDay() + '&nbsp;&nbsp;' + time
+            (date.getYear() + 1900) + '/' + (date.getMonth() + 1) + '/' + date.getDate() + '&nbsp;&nbsp;' + time
         );
         setTimeout(realtime, 1000);
     }

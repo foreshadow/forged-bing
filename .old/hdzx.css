@@ -1,0 +1,65 @@
+body {
+    font-family: microsoft yahei;
+}
+
+body >div.container {
+    width: auto;
+    margin: 0 4%;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.room {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.date-label {
+    display: inline-block; 
+    width: 90px; 
+    margin: 0;
+    line-height: 18px;
+}
+
+.block-line {
+    margin-right: 4px;
+    height: 18px;
+}
+
+.block-line-bottom-line .block{
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+.block {
+    display: inline-block; 
+    width: 18px; 
+    height: 18px;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.block-green {
+    background: #93e8a5;
+    color: white;
+}
+
+.block-red {
+    background: #f37777;
+    color: white;
+}
+
+.block-yellow {
+    background: #f0c862;
+    color: white;
+}
+
+.block-gray {
+    background: #cecece;
+    color: white;
+}
