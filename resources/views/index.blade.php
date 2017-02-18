@@ -30,7 +30,7 @@
       <ul class="nav navbar-nav navbar-right">
        {{-- <li><a href="#">Link</a></li> --}}
        <li class="dropdown">
-         <a id="btn-agenda" href="#">Agenda</a>
+         <a id="btn-agenda" href="#">Agenda <span class="caret"></span></a>
          <ul class="ul-fluid dropdown-menu" style="display: block;">
            <li>
              <div class="routine routine-index">

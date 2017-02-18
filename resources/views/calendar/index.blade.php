@@ -5,9 +5,9 @@
 {{-- <br>
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"></h3>
+    <h3 class="panel-title"></h3> --}}
     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">New</button>
-  </div>
+  {{-- </div>
   <div class="panel-body">
     @include('calendar.routine')
   </div>
@@ -42,9 +42,9 @@
             <label>Repeat</label>
             <div class="form-inline">
               Every
-              <input type="text" name="repeat_interval" class="form-control" value="7">
+              <input type="text" name="repeat_interval" class="form-control" value="">
               days for
-              <input type="text" name="repeat_time" class="form-control" value="16">
+              <input type="text" name="repeat_time" class="form-control" value="">
               times
             </div>
           </div>

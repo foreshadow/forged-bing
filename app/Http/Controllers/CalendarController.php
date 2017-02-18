@@ -14,7 +14,7 @@ class CalendarController extends Controller
 
     public function store(Request $request)
     {
-        $repeat = $request->get('repeat_time') or 1;
+        $repeat = $request->get('repeat_time') or $repeat = 1;
         $begin_at = strtotime($request->get('begin_at'));
         $end_at = strtotime($request->get('end_at'));
         for ($i = 0; $i < $repeat; $i += 1) {
@@ -29,16 +29,18 @@ class CalendarController extends Controller
                 $end_at += $request->get('repeat_interval') * 24 * 60 * 60;
             }
         }
+
         return redirect('/calendar');
     }
 
-    function api(Request $request)
+    public function api(Request $request)
     {
         $agendas = Agenda::all();
         foreach ($agendas as &$agenda) {
             $agenda->start = date('Y-m-d H:i:s', $agenda->begin_at);
             $agenda->end = date('Y-m-d H:i:s', $agenda->end_at);
         }
+
         return $agendas->toJson();
     }
 }
