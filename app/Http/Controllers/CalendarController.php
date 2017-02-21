@@ -9,7 +9,7 @@ class CalendarController extends Controller
 {
     public function index()
     {
-        return view('calendar.index')->with('agendas', Agenda::orderBy('begin_at')->where('end_at', '>=', time())->get());
+        return view('calendar.index')->with('agendas', Agenda::timeline());
     }
 
     public function store(Request $request)
@@ -35,7 +35,7 @@ class CalendarController extends Controller
 
     public function api(Request $request)
     {
-        $agendas = Agenda::all();
+        $agendas = Agenda::all()->merge(Agenda::codeforces());
         foreach ($agendas as &$agenda) {
             $agenda->start = date('Y-m-d H:i:s', $agenda->begin_at);
             $agenda->end = date('Y-m-d H:i:s', $agenda->end_at);

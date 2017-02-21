@@ -1,3 +1,10 @@
+<div class="date">
+  <div class="date">{{ date('j', time()) }}</div>
+  <div class="weekno">{{ date('l', time()) }}</div>
+  @if (8 < date('W', time()) && date('W', time()) <= 24)
+    <div class="weekno">, week {{ date('W', time()) - 8 }}</div>
+  @endif
+</div>
 @php
 $last = date('Ymd', time());
 $last2 = date('Ym', time());
@@ -26,7 +33,7 @@ $last2 = date('Ym', time());
 $last = date('Ymd', $agenda->begin_at);
 $last2 = date('Ym', $agenda->begin_at);
 @endphp
-<div class="event">
+<div class="event @if ($agenda->class) {{ $agenda->class }} @endif">
   <div class="time">
     <div class="time-begin">
       {{ date('G:i', $agenda->begin_at) }}
