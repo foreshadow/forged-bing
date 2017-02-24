@@ -253,4 +253,74 @@
 [Fri Feb 24 13:24:14 2017] ::1:50932 [200]: /favicon.ico
 [Fri Feb 24 13:24:19 2017] ::1:50933 [200]: /
 [Fri Feb 24 13:24:19 2017] ::1:50944 [200]: /css/app.css
-[Fri Feb 24
+[Fri Feb 24 13:24:19 2017] ::1:50945 [200]: /favicon.ico
+[Fri Feb 24 13:24:21 2017] ::1:50946 [200]: /css/app.css
+[Fri Feb 24 13:24:21 2017] ::1:50953 [200]: /css/app.css.map
+[Fri Feb 24 13:24:44 2017] ::1:50976 [200]: /
+[Fri Feb 24 13:24:44 2017] ::1:50980 [200]: /css/app.css
+[Fri Feb 24 13:24:44 2017] ::1:50981 [200]: /favicon.ico
+[Fri Feb 24 13:24:56 2017] ::1:50982 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:25:00 2017] ::1:51013 [200]: /css/app.css
+[Fri Feb 24 13:25:00 2017] ::1:51014 [200]: /css/app.css.map
+[Fri Feb 24 13:26:15 2017] ::1:51100 [200]: /
+[Fri Feb 24 13:26:15 2017] ::1:51102 [200]: /css/app.css
+[Fri Feb 24 13:26:15 2017] ::1:51104 [200]: /css/app.css.map
+[Fri Feb 24 13:26:15 2017] ::1:51106 [200]: /favicon.ico
+[Fri Feb 24 13:27:06 2017] ::1:51174 [200]: /
+[Fri Feb 24 13:27:06 2017] ::1:51176 [200]: /css/app.css
+[Fri Feb 24 13:27:06 2017] ::1:51177 [200]: /css/app.css.map
+[Fri Feb 24 13:27:06 2017] ::1:51179 [200]: /favicon.ico
+[Fri Feb 24 13:27:07 2017] ::1:51183 [200]: /
+[Fri Feb 24 13:27:07 2017] ::1:51185 [200]: /css/app.css
+[Fri Feb 24 13:27:07 2017] ::1:51186 [200]: /css/app.css.map
+[Fri Feb 24 13:27:08 2017] ::1:51188 [200]: /favicon.ico
+[Fri Feb 24 13:27:51 2017] ::1:51259 [200]: /
+[Fri Feb 24 13:27:51 2017] ::1:51260 [200]: /css/app.css
+[Fri Feb 24 13:27:51 2017] ::1:51261 [200]: /favicon.ico
+[Fri Feb 24 13:27:57 2017] ::1:51262 [200]: /css/app.css
+[Fri Feb 24 13:27:57 2017] ::1:51263 [200]: /css/app.css.map
+[Fri Feb 24 13:28:02 2017] ::1:51264 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:29:02 2017] ::1:51380 [200]: /
+[Fri Feb 24 13:29:02 2017] ::1:51382 [200]: /css/app.css
+[Fri Feb 24 13:29:02 2017] ::1:51383 [200]: /css/app.css.map
+[Fri Feb 24 13:29:02 2017] ::1:51386 [200]: /favicon.ico
+[Fri Feb 24 13:29:45 2017] ::1:51442 [200]: /
+[Fri Feb 24 13:29:45 2017] ::1:51444 [200]: /css/app.css
+[Fri Feb 24 13:29:45 2017] ::1:51445 [200]: /css/app.css.map
+[Fri Feb 24 13:29:46 2017] ::1:51447 [200]: /favicon.ico
+[Fri Feb 24 13:29:49 2017] ::1:51453 [200]: /
+[Fri Feb 24 13:29:49 2017] ::1:51455 [200]: /css/app.css
+[Fri Feb 24 13:29:49 2017] ::1:51456 [200]: /css/app.css.map
+[Fri Feb 24 13:29:50 2017] ::1:51458 [200]: /favicon.ico
+[Fri Feb 24 13:31:25 2017] ::1:51797 [200]: /favicon.ico
+[Fri Feb 24 13:31:26 2017] ::1:51798 [200]: /
+[Fri Feb 24 13:31:26 2017] ::1:51799 [200]: /css/app.css
+[Fri Feb 24 13:31:26 2017] ::1:51800 [200]: /favicon.ico
+[Fri Feb 24 13:31:37 2017] ::1:51801 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:31:37 2017] ::1:51802 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:31:37 2017] ::1:51823 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:31:57 2017] ::1:51871 [200]: /
+[Fri Feb 24 13:31:57 2017] ::1:51882 [200]: /css/app.css
+[Fri Feb 24 13:31:57 2017] ::1:51883 [200]: /favicon.ico
+[Fri Feb 24 13:32:08 2017] ::1:51884 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:32:08 2017] ::1:51885 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:35:10 2017] ::1:52170 [200]: /
+[Fri Feb 24 13:35:10 2017] ::1:52171 [200]: /css/app.css
+[Fri Feb 24 13:35:10 2017] ::1:52172 [200]: /favicon.ico
+[Fri Feb 24 13:35:20 2017] ::1:52173 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:35:20 2017] ::1:52174 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:35:55 2017] ::1:52254 [200]: /css/app.css
+[Fri Feb 24 13:35:55 2017] ::1:52256 [200]: /css/app.css.map
+[Fri Feb 24 13:36:23 2017] ::1:52296 [200]: /calendar
+[Fri Feb 24 13:36:23 2017] ::1:52297 [200]: /css/app.css
+[Fri Feb 24 13:36:23 2017] ::1:52298 [200]: /css/app.css.map
+[Fri Feb 24 13:36:23 2017] ::1:52299 [200]: /api/calendar?start=2017-01-29&end=2017-03-05&_=1487914583720
+[Fri Feb 24 13:36:23 2017] ::1:52316 [200]: /favicon.ico
+[Fri Feb 24 13:36:27 2017] ::1:52325 [200]: /css/app.css.map
+[Fri Feb 24 13:36:27 2017] ::1:52326 [200]: /favicon.ico
+[Fri Feb 24 13:36:37 2017] ::1:52327 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:36:37 2017] ::1:52328 Invalid request (Unexpected EOF)
+[Fri Feb 24 13:36:37 2017] ::1:52345 [200]: /
+[Fri Feb 24 13:36:37 2017] ::1:52353 [200]: /css/app.css
+[Fri Feb 24 13:36:37 2017] ::1:52354 [200]: /favicon.ico
+[Fri Feb 24 

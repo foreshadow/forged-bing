@@ -51,7 +51,7 @@
     </div>
     <div class="content">
       <div class="title">{{ $agenda->title }}</div>
-      <div class="description">{{ $agenda->description }}</div>
+      <div class="description">{!! $agenda->description !!}</div>
     </div>
   </div>
 @endforeach

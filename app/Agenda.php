@@ -23,6 +23,7 @@ class Agenda extends Model
         $contests = CodeforcesContest::orderBy('startTimeSeconds')->where('startTimeSeconds', '>=', time() - 9000)->get();
         foreach ($contests as &$contest) {
             $contest->title = $contest->name;
+            $contest->description = '<a href="//codeforces.com/contest/' . $contest->id . '">codeforces.com/contest/' . $contest->id . '</a>';
             $contest->begin_at = $contest->startTimeSeconds;
             $contest->end_at = $contest->startTimeSeconds + $contest->durationSeconds;
             $contest->class = 'bg-info';
