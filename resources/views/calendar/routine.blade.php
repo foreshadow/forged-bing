@@ -35,12 +35,21 @@
     $last2 = date('Ym', $agenda->begin_at);
   @endphp
   <div class="event @if ($agenda->class) {{ $agenda->class }} @endif">
-    <button type="button" class="close pull-right" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <form action="/calendar/{{ $agenda->id }}" method="POST">
+      {{ csrf_field() }}
+      {{ method_field('DELETE') }}
+      <button type="submit" class="close" data-confirm="你确定吗？"
+                      {{-- <span class='glyphicon glyphicon-trash'></span>  --}}
+              data-toggle="tooltip" data-placement="left" title="删除">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+    </form>
     <div class="time">
       <div class="time-begin">
         {{ date('G:i', $agenda->begin_at) }}
       </div>
-      @if ($agenda->end_at)
+      @if ($agenda->end_at != $agenda->begin_at)
           <div class="time-end">
             {{ date('G:i', $agenda->end_at) }}
             @if ($agenda->end_at - $agenda->begin_at >= 24 * 60 * 60 || date('Hi', $agenda->end_at) < date('Hi', $agenda->begin_at))
@@ -51,7 +60,7 @@
     </div>
     <div class="content">
       <div class="title">{{ $agenda->title }}</div>
-      <div class="description">{!! $agenda->description !!}</div>
+      <div class="description inline">{!! $agenda->description !!}</div>
     </div>
   </div>
 @endforeach

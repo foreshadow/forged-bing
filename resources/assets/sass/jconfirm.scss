@@ -1,0 +1,36 @@
+.jconfirm.jconfirm-infinity {
+    .jconfirm-bg {
+        background: black;
+        opacity: 0.55;
+    }
+
+    .jconfirm-box {
+        &.loading {
+            &:before {}
+
+            &:after {}
+        }
+
+        div.jconfirm-closeIcon {}
+
+        div.jconfirm-title-c {}
+
+        div.jconfirm-content-pane {}
+
+        div.jconfirm-content {
+            &:empty {}
+        }
+
+        .jconfirm-buttons {
+            @extend .pull-right;
+
+            button {
+                @extend .btn-sm;
+            }
+
+            button + button {}
+        }
+
+        &.hilight {}
+    }
+}

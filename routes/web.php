@@ -14,6 +14,6 @@
 use App\Agenda;
 
 Route::get('/', function () {
-    return view('index')->with('agendas', Agenda::timeline());
+    return view('index')->with('agendas', Agenda::recent());
 });
 Route::resource('calendar', 'CalendarController');

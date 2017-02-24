@@ -69,7 +69,7 @@
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a id="btn-calendar" href="#">Calendar</a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" style="box-shadow: 0 0 100px 10px black;">
             <li>
               <div id="calendar" class="calendar"></div>
             </li>
@@ -79,7 +79,7 @@
       <ul class="nav navbar-nav pull-right">
         <li><a href="http://fanyi.baidu.com">Translation</a></li>
         <li><a href="http://mail.bjtu.edu.cn">Bjtu Mail</a></li>
-        <li><a href="http://pastebin.infinitys.site">Pastebin</a></li>
+        <li><a href="https://pastebin.infinitys.site">Pastebin</a></li>
         <li><a href="http://cplusplus.com/reference">C++ Reference</a></li>
         {{-- <li><a href="http://www.w3school.com.cn/sql/">SQL Tutorial</a></li> --}}
         <li><a href="http://api.jquery.com/">jQuery API</a></li>
@@ -123,7 +123,7 @@ $(document).ready(function() {
     $('#calendar').fullCalendar({
         events: '/api/calendar',
         defaultView: 'basicWeek',
-        header: { left: 'title', center: 'prev,today,next', right: 'toMonth,toWeek,toWeekAgenda' },
+        header: { left: 'title', right: 'prev,today,next', center: 'toMonth,toWeek,toWeekAgenda' },
         height: 'auto',
         fixedWeekCount : false,
         weekNumbers: true,

@@ -33,9 +33,16 @@ class CalendarController extends Controller
         return redirect('/calendar');
     }
 
+    public function destroy($id, Request $request)
+    {
+        $agenda = Agenda::find($id);
+        $agenda->delete();
+        return redirect('/');
+    }
+
     public function api(Request $request)
     {
-        $agendas = Agenda::all()->merge(Agenda::codeforces());
+        $agendas = Agenda::recent();
         foreach ($agendas as &$agenda) {
             $agenda->start = date('Y-m-d H:i:s', $agenda->begin_at);
             $agenda->end = date('Y-m-d H:i:s', $agenda->end_at);
