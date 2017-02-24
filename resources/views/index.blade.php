@@ -46,6 +46,7 @@
 @endsection
 
 @section('content')
+@include('calendar.modal')
 <div class="full-screen alternative">You are offline</div>
 <div class="full-screen background"></div>
 <div class="full-screen foreground"></div>

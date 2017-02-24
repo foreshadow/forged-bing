@@ -7691,6 +7691,11 @@ button.close {
   }
 }
 
+.navbar-inverse .btn-link:focus,
+.navbar-inverse .btn-link:hover {
+  color: inherit;
+}
+
 .container-infinity {
   margin-left: 8%;
   margin-right: 4%;
@@ -7760,6 +7765,16 @@ ul.ul-fluid {
 
 .routine .event .content .description {
   margin-bottom: 0;
+}
+
+.routine .close {
+  font-size: xx-large;
+  line-height: 40px;
+  color: transparent;
+}
+
+.routine .event:hover .close {
+  color: inherit;
 }
 
 .routine hr {

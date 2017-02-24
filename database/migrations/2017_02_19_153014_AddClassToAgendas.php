@@ -14,7 +14,7 @@ class AddClassToAgendas extends Migration
     public function up()
     {
         Schema::table('agendas', function (Blueprint $table) {
-            $table->string('class');
+            $table->string('class')->nullable();
         });
     }
 

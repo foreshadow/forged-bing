@@ -22,7 +22,7 @@ class CalendarController extends Controller
             $agenda->title = $request->get('title');
             $agenda->description = $request->get('description');
             $agenda->begin_at = $begin_at;
-            $agenda->end_at = $end_at;
+            $agenda->end_at = $end_at or $agenda->end_at = $begin_at;
             $agenda->save();
             $begin_at += $request->get('repeat_interval') * 24 * 60 * 60;
             if ($end_at) {

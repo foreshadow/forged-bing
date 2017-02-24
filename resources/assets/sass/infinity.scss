@@ -82,6 +82,16 @@ ul.ul-fluid {
         }
     }
 
+    .close {
+        font-size: xx-large;
+        line-height: 40px;
+        color: transparent;
+    }
+
+    .event:hover .close {
+        color: inherit;
+    }
+
     hr {
         margin: 0;
         padding: 0;

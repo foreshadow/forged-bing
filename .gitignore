@@ -7,3 +7,7 @@
 Homestead.json
 Homestead.yaml
 .env
+
+*/nohup.out
+*.pyc
+crawler/env.py
