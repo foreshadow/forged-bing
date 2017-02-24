@@ -33,6 +33,8 @@ ul.ul-fluid {
             }
 
             .content {
+                max-width: 247px;
+
                 .title {
                     @extend h5;
                     margin-top: 0;
@@ -99,7 +101,7 @@ ul.ul-fluid {
 }
 
 .calendar {
-    width: 960px;
+    width: 1235px;
     margin: 15px;
 
     .fc-content {

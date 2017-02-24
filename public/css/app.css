@@ -297,8 +297,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
@@ -1841,7 +1841,8 @@ blockquote .small:before {
 }
 
 .blockquote-reverse,
-blockquote.pull-right {
+blockquote.pull-right,
+.jconfirm.jconfirm-infinity .jconfirm-box blockquote.jconfirm-buttons {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #eeeeee;
@@ -1852,18 +1853,18 @@ blockquote.pull-right {
 .blockquote-reverse footer:before,
 .blockquote-reverse small:before,
 .blockquote-reverse .small:before,
-blockquote.pull-right footer:before,
-blockquote.pull-right small:before,
-blockquote.pull-right .small:before {
+blockquote.pull-right footer:before, .jconfirm.jconfirm-infinity .jconfirm-box blockquote.jconfirm-buttons footer:before,
+blockquote.pull-right small:before, .jconfirm.jconfirm-infinity .jconfirm-box blockquote.jconfirm-buttons small:before,
+blockquote.pull-right .small:before, .jconfirm.jconfirm-infinity .jconfirm-box blockquote.jconfirm-buttons .small:before {
   content: '';
 }
 
 .blockquote-reverse footer:after,
 .blockquote-reverse small:after,
 .blockquote-reverse .small:after,
-blockquote.pull-right footer:after,
-blockquote.pull-right small:after,
-blockquote.pull-right .small:after {
+blockquote.pull-right footer:after, .jconfirm.jconfirm-infinity .jconfirm-box blockquote.jconfirm-buttons footer:after,
+blockquote.pull-right small:after, .jconfirm.jconfirm-infinity .jconfirm-box blockquote.jconfirm-buttons small:after,
+blockquote.pull-right .small:after, .jconfirm.jconfirm-infinity .jconfirm-box blockquote.jconfirm-buttons .small:after {
   content: '\00A0 \2014';
 }
 
@@ -3997,7 +3998,7 @@ fieldset[disabled] .btn-link:focus {
   border-radius: 6px;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .jconfirm.jconfirm-infinity .jconfirm-box .jconfirm-buttons button {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -4106,7 +4107,7 @@ tbody.collapse.in {
   background-clip: padding-box;
 }
 
-.dropdown-menu.pull-right {
+.dropdown-menu.pull-right, .jconfirm.jconfirm-infinity .jconfirm-box .dropdown-menu.jconfirm-buttons {
   right: 0;
   left: auto;
 }
@@ -4189,7 +4190,7 @@ tbody.collapse.in {
   z-index: 990;
 }
 
-.pull-right > .dropdown-menu {
+.pull-right > .dropdown-menu, .jconfirm.jconfirm-infinity .jconfirm-box .jconfirm-buttons > .dropdown-menu {
   right: 0;
   left: auto;
 }
@@ -5111,7 +5112,7 @@ tbody.collapse.in {
   margin-bottom: 7px;
 }
 
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .jconfirm.jconfirm-infinity .jconfirm-box .jconfirm-buttons button.navbar-btn {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -5957,7 +5958,8 @@ a.thumbnail.active {
 }
 
 .media-right,
-.media > .pull-right {
+.media > .pull-right, .jconfirm.jconfirm-infinity .jconfirm-box
+.media > .jconfirm-buttons {
   padding-left: 10px;
 }
 
@@ -7404,7 +7406,7 @@ button.close {
   margin-right: auto;
 }
 
-.pull-right {
+.pull-right, .jconfirm.jconfirm-infinity .jconfirm-box .jconfirm-buttons {
   float: right !important;
 }
 
@@ -7729,6 +7731,10 @@ ul.ul-fluid {
   width: 50px;
 }
 
+.routine.routine-index .event .content {
+  max-width: 247px;
+}
+
 .routine.routine-index .event .content .title {
   margin-top: 0;
 }
@@ -7783,7 +7789,7 @@ ul.ul-fluid {
 }
 
 .calendar {
-  width: 960px;
+  width: 1235px;
   margin: 15px;
 }
 
@@ -8092,6 +8098,11 @@ body .b_searchbox {
   box-sizing: content-box;
   position: relative;
   height: 40px;
+}
+
+.jconfirm.jconfirm-infinity .jconfirm-bg {
+  background: black;
+  opacity: 0.55;
 }
 
 /*# sourceMappingURL=app.css.map */
