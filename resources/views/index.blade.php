@@ -25,6 +25,7 @@
         <li><a href="//bilibili.com">Bilibili <span class="badge"></span></a></li>
         <li><a href="//github.com">Github <span class="badge"></span></a></li>
         <li><a href="//codeforces.com">CodeForces <span class="badge"></span></a></li>
+        <li><a href="//vjudge.net">Virtual Judge</a></li>
       </ul>
       <!-- Right Side Of Navbar -->
       <ul class="nav navbar-nav navbar-right">
