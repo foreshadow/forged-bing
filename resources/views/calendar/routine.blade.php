@@ -11,9 +11,7 @@
   $last2 = date('Ym', time());
 @endphp
 @foreach ($agendas as $agenda)
-  @if ($loop->index)
-    <hr>
-  @endif
+  <hr>
   @if (date('Ym', $agenda->begin_at) != $last2)
     <div class="date">
       <div class="date">{{ date('F', $agenda->begin_at) }}</div>

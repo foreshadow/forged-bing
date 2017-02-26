@@ -9,7 +9,7 @@ class CalendarController extends Controller
 {
     public function index()
     {
-        return view('calendar.index')->with('agendas', Agenda::timeline());
+        return view('calendar.index')->with('agendas', Agenda::recent());
     }
 
     public function store(Request $request)
@@ -23,6 +23,7 @@ class CalendarController extends Controller
             $agenda->description = $request->get('description');
             $agenda->begin_at = $begin_at;
             $agenda->end_at = $end_at or $agenda->end_at = $begin_at;
+            $agenda->class = $request->get('class');
             $agenda->save();
             $begin_at += $request->get('repeat_interval') * 24 * 60 * 60;
             if ($end_at) {
@@ -30,7 +31,7 @@ class CalendarController extends Controller
             }
         }
 
-        return redirect('/calendar');
+        return redirect()->back();
     }
 
     public function destroy($id, Request $request)
