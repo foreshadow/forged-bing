@@ -2,3 +2,18 @@
 .navbar-inverse .btn-link:hover {
     color: inherit;
 }
+
+/* transparent */
+.navbar-inverse {
+    background: none;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    opacity: 0.8; 
+    
+    &:hover {
+        opacity: 1;
+    }
+}

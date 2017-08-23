@@ -7698,6 +7698,21 @@ button.close {
   color: inherit;
 }
 
+/* transparent */
+.navbar-inverse {
+  background: none;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  opacity: 1;
+}
+
 .container-infinity {
   margin-left: 8%;
   margin-right: 4%;
@@ -7791,6 +7806,7 @@ ul.ul-fluid {
 .calendar {
   width: 1235px;
   margin: 15px;
+  font-family: "Segoe UI", "Open Sans", "Lucida Sans Unicode", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .calendar .fc-content {
@@ -8008,10 +8024,6 @@ ul.ul-fluid {
 
 .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
   float: left;
-}
-
-.fc-title {
-  padding: 3px 6px;
 }
 
 .sw_sform {

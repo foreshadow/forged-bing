@@ -43,10 +43,18 @@ class CalendarController extends Controller
 
     public function api(Request $request)
     {
-        $agendas = Agenda::recent();
+        $agendas = Agenda::all();
         foreach ($agendas as &$agenda) {
             $agenda->start = date('Y-m-d H:i:s', $agenda->begin_at);
             $agenda->end = date('Y-m-d H:i:s', $agenda->end_at);
+            // $agenda->title .= ' ' . $agenda->description;
+            if ($agenda->class == 'bg-info') {
+                $agenda->color = 'green';
+            } elseif ($agenda->class == 'bg-warning') {
+                $agenda->color = 'purple';
+            } elseif ($agenda->class == 'bg-danger') {
+                $agenda->color = 'orange';
+            }
         }
 
         return $agendas->toJson();

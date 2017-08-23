@@ -45,10 +45,7 @@ class database:
     def auto_update(self, array, table, primarykey):
         statement = 'update {} set {} where {} = {}'.format(
             table,
-            string.join([
-                '{} = {}'.format(self.__escape_key(column), self.__escape_value(array[column]))
-                for column in array
-            ], ', '),
+            string.join(['{} = {}'.format(self.__escape_key(column), self.__escape_value(array[column])) for column in array], ', '),
             self.__escape_key(primarykey),
             self.__escape_value(array[primarykey])
         )
@@ -67,5 +64,7 @@ class database:
     def __escape_value(value):
         if type(value) == type(0):
             return str(value)
+        elif type(value) == type(unicode()):
+            return "'{}'".format(value.encode('utf-8').replace("'", "''"))
         else:
             return "'{}'".format(str(value).replace("'", "''"))

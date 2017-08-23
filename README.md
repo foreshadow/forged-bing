@@ -5,6 +5,9 @@ Infinity's forged bing with calendar and links.
 - bash
 - mysql
 - php
+  - mbstring
+  - fileinfo
+  - openssl
 - composer
 - node.js
 

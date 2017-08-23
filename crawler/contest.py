@@ -13,7 +13,7 @@ if __name__ == '__main__':
         for contest in j['result'][: recent]:
             db.insert_or_update(contest, 'codeforces_contests', 'id')
             contest['title'] = contest.pop('name')
-            url = 'codeforces.com/contest/{}'.format(contest['id'])
+            url = '//codeforces.com/contest/{}'.format(contest['id'])
             contest['description'] = '<a href="{}">{}</a>'.format(url, url)
             contest['uuid'] = '{}{}'.format(contest.pop('type'), contest.pop('id'))
             contest['begin_at'] = contest['startTimeSeconds']

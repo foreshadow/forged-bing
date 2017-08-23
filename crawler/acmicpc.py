@@ -20,6 +20,8 @@ if __name__ == '__main__':
             contest['begin_at'] = int(time.mktime(time.strptime(contest.pop('start_time'), "%Y-%m-%d %H:%M:%S")))
             contest['end_at'] = contest['begin_at']
             contest['title'] = contest.pop('name')
+            if contest['title'][:3] == 'SRM':
+                contest['title'] = 'Topcoder ' + contest['title']
             url = contest.pop('link')
             contest['description'] = '<a href="{}">{}</a>'.format(url, url)
             db.insert_or_update(contest, 'agendas', 'uuid')
