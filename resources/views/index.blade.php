@@ -3,7 +3,7 @@
 @section('title', 'Hello Infinity!')
 
 @section('navbar')
-<nav class="navbar navbar-inverse navbar-static-top" style="box-shadow: -25px 25px 25px 12px rgba(0, 0, 0, .35) inset;">
+<nav class="navbar navbar-inverse navbar-static-top">
   <div class="container-infinity">
     <div class="navbar-header">
       <!-- Collapsed Hamburger -->
@@ -23,18 +23,16 @@
         <li><a href="//cn.bing.com">Bing</a></li>
         <li><a href="//taobao.com">Taobao</a></li>
         <li><a href="//bilibili.com">Bilibili <span class="badge"></span></a></li>
-        <li><a href="https://zh-cn.boardgamearena.com">Board Game Arena</a></li>
-        <li><a href="https://github.com">Github <span class="badge"></span></a></li>
+        <li><a href="//github.com">Github <span class="badge"></span></a></li>
         <li><a href="//codeforces.com">CodeForces <span class="badge"></span></a></li>
-        <li><a href="//citel.bjtu.edu.cn/vjudge">BJTU Vjudge</a></li>
-        <li><a href="https://qcloud.com">QCloud</a></li>
+        <li><a href="//vjudge.net">Virtual Judge</a></li>
       </ul>
       <!-- Right Side Of Navbar -->
       <ul class="nav navbar-nav navbar-right">
        {{-- <li><a href="#">Link</a></li> --}}
        <li class="dropdown">
          <a id="btn-agenda" href="#">Agenda <span class="caret"></span></a>
-         <ul class="ul-fluid dropdown-menu" style="display: block;">
+         <ul class="ul-fluid dropdown-menu dropdown-menu-transparent" style="display: block;">
            <li>
              <div class="routine routine-index">
                 @include('calendar.routine')
@@ -65,7 +63,7 @@
   </div>
 </div>
 
-<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation" style="box-shadow: -25px -25px 25px 12px rgba(0, 0, 0, .55) inset;">
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
   <div class="container-infinity">
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -80,11 +78,9 @@
         <li><a href="/calendar">Detail</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
-        <li><a href="http://localhost:8000">localhost:8000</a></li>
         <li><a href="http://fanyi.baidu.com">Translation</a></li>
-        <li><a href="http://mail.bjtu.edu.cn">mail.bjtu</a></li>
-        <li><a href="//bootcdn.cn">BootCDN</a></li>
-        <li><a href="https://bjtuacm.org/pastebin">Pastebin</a></li>
+        <li><a href="http://mail.bjtu.edu.cn">Bjtu Mail</a></li>
+        <li><a href="https://pastebin.infinitys.site">Pastebin</a></li>
         <li><a href="http://cplusplus.com/reference">C++ Reference</a></li>
         {{-- <li><a href="http://www.w3school.com.cn/sql/">SQL Tutorial</a></li> --}}
         <li><a href="http://api.jquery.com/">jQuery API</a></li>
