@@ -3,7 +3,8 @@
 @section('title', 'Hello Infinity!')
 
 @section('navbar')
-<nav class="navbar navbar-inverse navbar-static-top" style="box-shadow: -25px 25px 25px 12px rgba(0, 0, 0, .35) inset;">
+<!-- <nav class="navbar navbar-inverse navbar-static-top" style="box-shadow: -25px 25px 25px 12px rgba(0, 0, 0, .35) inset;"> -->
+<nav class="navbar navbar-inverse navbar-static-top" style="box-shadow: 0 12.5px 50px 25px rgba(0, 0, 0, .55); min-height: 0px; max-height: 0px;">
   <div class="container-infinity">
     <div class="navbar-header">
       <!-- Collapsed Hamburger -->
